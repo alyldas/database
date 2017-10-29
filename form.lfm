@@ -26,6 +26,7 @@ object Database: TDatabase
     Anchors = [akTop, akLeft, akRight, akBottom]
     TabIndex = 0
     TabOrder = 0
+    Visible = False
     object Table1TabSheet: TTabSheet
       Caption = 'Телеканалы'
       ClientHeight = 314
@@ -177,21 +178,25 @@ object Database: TDatabase
     end
   end
   object MainMenu: TMainMenu
-    left = 432
-    top = 32
+    left = 320
+    top = 288
     object DB: TMenuItem
       Caption = 'База данных'
       object dbCreate: TMenuItem
         Caption = 'Создать'
+        OnClick = dbCreateClick
       end
       object dbOpen: TMenuItem
         Caption = 'Открыть'
+        OnClick = dbOpenClick
       end
       object dbSave: TMenuItem
         Caption = 'Сохранить'
+        OnClick = dbSaveClick
       end
       object dbClose: TMenuItem
         Caption = 'Закрыть'
+        OnClick = dbCloseClick
       end
     end
     object Help: TMenuItem
@@ -199,5 +204,11 @@ object Database: TDatabase
       ShortCut = 112
       OnClick = HelpClick
     end
+  end
+  object SelectDirectoryDialog: TSelectDirectoryDialog
+    Title = 'Выберите место расположения файлов базы данных'
+    Options = [ofEnableSizing]
+    left = 400
+    top = 288
   end
 end
