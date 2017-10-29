@@ -1,0 +1,5 @@
+program Console;
+
+begin
+end.
+
