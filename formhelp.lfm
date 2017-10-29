@@ -1,0 +1,27 @@
+object HelpForm: THelpForm
+  Left = 255
+  Height = 144
+  Top = 191
+  Width = 240
+  BorderStyle = bsDialog
+  Caption = 'Помощь'
+  ClientHeight = 144
+  ClientWidth = 240
+  LCLVersion = '1.6.4.0'
+  object HelpText: TStaticText
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 5
+    Height = 134
+    Top = 5
+    Width = 230
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 5
+    Caption = 'Для начала создайте или откройте базу данных.'#13#10#13#10'Для переключения между таблицами используйте вкладки.'#13#10#13#10'Для удаления записи выберите запись и нажмите клавишу Delete.'
+    TabOrder = 0
+  end
+end

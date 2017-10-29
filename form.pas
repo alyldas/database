@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, FileUtil, Forms, Controls, Graphics, Dialogs, Menus,
-  ComCtrls, Grids, StdCtrls, Types;
+  ComCtrls, Grids, StdCtrls, Types, FormHelp;
 
 type
 
@@ -114,7 +114,7 @@ end;
 
 procedure TDatabase.HelpClick(Sender: TObject);
 begin
-
+  HelpForm.Show;
 end;
 
 end.
